@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/boxetheus/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsBoxetheusContext_B566F7F488",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/boxetheusappdbserver/databases/Boxetheus_dbapp",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:BoxetheusContext",
+      "dynamicId": null
+    }
+  }
+}
