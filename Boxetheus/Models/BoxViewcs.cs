@@ -22,7 +22,13 @@ public class BoxView
     [StringLength(50)]
     [Required]
     public string? Design { get; set; }
+    [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
+    [StringLength(50)]
+    [Required]
     public string? Shape { get; set; }
+    [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
+    [StringLength(50)]
+    [Required]
     public string? Size { get; set; }
     public int Quantity { get; set; }
     [Range(1, 500)]
