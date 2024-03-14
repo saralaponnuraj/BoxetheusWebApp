@@ -27,7 +27,7 @@ public class BoxView
     [Required]
     public string? Shape { get; set; }
     [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
-    [StringLength(50)]
+    [StringLength(60)]
     [Required]
     public string? Size { get; set; }
     public int Quantity { get; set; }
