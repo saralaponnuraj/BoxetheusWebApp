@@ -20,11 +20,29 @@ namespace Boxetheus.Controllers
         }
 
         // GET: BoxViews
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.BoxView.ToListAsync());
-        }
+       // public async Task<IActionResult> Index()
+        //{
+          //  return View(await _context.BoxView.ToListAsync());
+        //}
 
+
+        public async Task<IActionResult> Index(string searchString)
+        {
+            if (_context.BoxView == null)
+            {
+                return Problem("Entity set 'BoxetheusContext.BoxView'  is null.");
+            }
+
+            var BoxViews = from m in _context.BoxView
+                           select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                BoxViews = BoxViews.Where(s => s.Brand!.Contains(searchString));
+            }
+
+            return View(await BoxViews.ToListAsync());
+        }
         // GET: BoxViews/Details/5
         public async Task<IActionResult> Details(int? id)
         {
