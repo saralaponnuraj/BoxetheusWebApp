@@ -20,28 +20,49 @@ namespace Boxetheus.Controllers
         }
 
         // GET: BoxViews
-       // public async Task<IActionResult> Index()
+        // public async Task<IActionResult> Index()
         //{
-          //  return View(await _context.BoxView.ToListAsync());
+        //  return View(await _context.BoxView.ToListAsync());
         //}
 
-
-        public async Task<IActionResult> Index(string searchString)
+        // GET: BoxViews
+        public async Task<IActionResult> Index(string BoxDesign, string searchString)
         {
             if (_context.BoxView == null)
             {
-                return Problem("Entity set 'BoxetheusContext.BoxView'  is null.");
+                return Problem("Entity set 'BoxtheusContext.BoxView'  is null.");
             }
 
+            // Use LINQ to get list of genres.
+            IQueryable<string> boxQuery = from m in _context.BoxView
+                                          orderby m.Design
+                                          select m.Design;
             var BoxViews = from m in _context.BoxView
                            select m;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
                 BoxViews = BoxViews.Where(s => s.Brand!.Contains(searchString));
             }
 
-            return View(await BoxViews.ToListAsync());
+            if (!string.IsNullOrEmpty(BoxDesign))
+            {
+                BoxViews = BoxViews.Where(x => x.Design == BoxDesign);
+            }
+
+            var BoxDesignVM = new BoxViewDesignModel
+            {
+                Design = new SelectList(await boxQuery.Distinct().ToListAsync()),
+                BoxViews = await BoxViews.ToListAsync()
+            };
+
+            return View(BoxDesignVM);
+        }
+
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
         }
         // GET: BoxViews/Details/5
         public async Task<IActionResult> Details(int? id)
