@@ -26,8 +26,8 @@ namespace Boxetheus.Models
                         Shape = "Oval",
                         Size = "Medium",
                         Quantity = 10,
-                        Price = 277.50M
-                        //Color = "Pink",
+                        Price = 277.50M,
+                        Color = "Pink"
                     },
                     new BoxView
                     {
@@ -38,8 +38,8 @@ namespace Boxetheus.Models
                         Shape = "Custom Shape",
                         Size = "Large",
                         Quantity = 15,
-                        Price = 80.49M
-                        //Color = "Gray",
+                        Price = 80.49M,
+                        Color = "Gray",
                     },
                     new BoxView
                     {
@@ -50,8 +50,8 @@ namespace Boxetheus.Models
                         Shape = "Standard",
                         Size = "Extra Large",
                         Quantity = 100,
-                        Price = 259.59M
-                        //Color = "Beige"
+                        Price = 259.59M,
+                        Color = "Beige"
                     },
                     new BoxView
                     {
@@ -62,8 +62,8 @@ namespace Boxetheus.Models
                         Shape = "Square",
                         Size = "Extra Large",
                         Quantity = 12,
-                        Price = 183.29M
-                        //Color = "Brown"
+                        Price = 183.29M,
+                        Color = "Brown"
                     },
                     new BoxView
                     {
@@ -74,8 +74,8 @@ namespace Boxetheus.Models
                         Shape = "Rectangular",
                         Size = "Large",
                         Quantity = 50,
-                        Price = 53.97M
-                        //Color = "Blue"
+                        Price = 53.97M,
+                        Color = "Blue"
                     },
                     new BoxView
                     {
@@ -86,8 +86,8 @@ namespace Boxetheus.Models
                         Shape = "Square",
                         Size = "Medium",
                         Quantity = 8,
-                        Price = 250.39M
-                        //Color = "Red Violet"
+                        Price = 250.39M,
+                        Color = "Red Violet"
                     },
                     new BoxView
                     {
@@ -98,8 +98,8 @@ namespace Boxetheus.Models
                         Shape = "Oval",
                         Size = "Small",
                         Quantity = 2,
-                        Price = 105.50M
-                        //Color = "Black"
+                        Price = 105.50M,
+                        Color = "Black"
                     },
                     new BoxView
                     {
@@ -110,8 +110,8 @@ namespace Boxetheus.Models
                         Shape = "Square",
                         Size = "Extra Large",
                         Quantity = 6,
-                       Price = 103.15M
-                        //Color = "Beige"
+                       Price = 103.15M,
+                       Color = "Beige"
                     },
                     new BoxView
                     {
@@ -122,8 +122,8 @@ namespace Boxetheus.Models
                         Shape = "Square",
                         Size = "Extra Large",
                         Quantity = 4,
-                        Price = 83.09M
-                        //Color = "Brown"
+                        Price = 83.09M,
+                        Color = "Brown"
                     },
                      new BoxView
                      {
@@ -134,8 +134,8 @@ namespace Boxetheus.Models
                          Shape = "Custom Shape",
                          Size = "Large",
                          Quantity = 15,
-                         Price = 80.49M
-                         //Color = "Gray"
+                         Price = 80.49M,
+                         Color = "Gray"
                      }
                 );
                 context.SaveChanges();
