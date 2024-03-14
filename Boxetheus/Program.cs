@@ -1,8 +1,11 @@
-using Boxetheus.Data;
+﻿using Boxetheus.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<BoxetheusContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BoxetheusContext") ?? throw new InvalidOperationException("Connection string 'BoxetheusContext' not found.")));
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
