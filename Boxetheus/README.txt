@@ -199,4 +199,14 @@ Servername: boxetheusappdbserver.database.windows.net
 Server admin: boxetheusadminuser
 Password: Products@321
 
-Azure link : https://boxetheus.azurewebsites.net/
+1. Test :
+
+Github Repository Link: https://github.com/Dheeru-28-7418/Boxtheus
+
+Azure Link: https://boxetheusapplicationweb.azurewebsites.net/
+
+2. Production: Published and deployed with Authentication & Authorization.
+
+Github Repository Link: https://github.com/saralaponnuraj/BoxetheusWebApp
+
+Azure Link: https://boxetheus.azurewebsites.net
