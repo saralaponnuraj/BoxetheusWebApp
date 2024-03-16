@@ -1,7 +1,7 @@
 ﻿Group: Theta 
 Group Members:	Sarala Ponnuraj
-				Dheeru Harshavardhan Rao Erabelly
-				Eshika Lad
+		Dheeru Harshavardhan Rao Erabelly
+		Eshika Lad
 Subject: - Web Application Security
 Instructor: - Mr. Andrew Steele
 ===========================================================================================================================================================================
