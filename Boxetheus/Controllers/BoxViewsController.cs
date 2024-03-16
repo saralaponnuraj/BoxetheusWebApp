@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Boxetheus.Data;
 using Boxetheus.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Boxetheus.Controllers
 {
@@ -26,6 +27,7 @@ namespace Boxetheus.Controllers
         //}
 
         // GET: BoxViews
+        [Authorize]
         public async Task<IActionResult> Index(string BoxDesign, string searchString)
         {
             if (_context.BoxView == null)
@@ -83,6 +85,7 @@ namespace Boxetheus.Controllers
         }
 
         // GET: BoxViews/Create
+        [Authorize(Roles ="Admin")]
         public IActionResult Create()
         {
             return View();
@@ -93,6 +96,7 @@ namespace Boxetheus.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Create([Bind("Id,Brand,OrderDate,Category,Design,Shape,Size,Quantity,Price,Color")] BoxView boxView)
         {
             if (ModelState.IsValid)
@@ -105,6 +109,7 @@ namespace Boxetheus.Controllers
         }
 
         // GET: BoxViews/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -125,6 +130,7 @@ namespace Boxetheus.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Brand,OrderDate,Category,Design,Shape,Size,Quantity,Price,Color")] BoxView boxView)
         {
             if (id != boxView.Id)
@@ -156,6 +162,7 @@ namespace Boxetheus.Controllers
         }
 
         // GET: BoxViews/Delete/5
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -176,6 +183,7 @@ namespace Boxetheus.Controllers
         // POST: BoxViews/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var boxView = await _context.BoxView.FindAsync(id);

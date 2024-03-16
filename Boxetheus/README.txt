@@ -34,8 +34,8 @@ Identifying and resolving database fetching errors in Visual Studio 2022 involve
 Encountering errors while updating the database or integrating search functionality into a specific column within the index view in Visual Studio can be resolved by carefully reviewing database update procedures and ensuring the correct implementation of search features, promptly addressing any issues that arise.
 
 Migration Time: 
-Initial Migration: 20240219040441
-New column Migration: 20240221025510
+Initial Migration: 20240313235235
+New column Migration: 20240314012625
 
 Time taken:
 5 hours 30 mins
@@ -169,5 +169,31 @@ Create register login.
 Made changes in program.cs file and appsettings.Production.json file
 
 2024-03-13
-17:00
-Deployed successfully in Azure
+17:00 
+
+Deployed successfully in Azure - by Sarala
+
+2024-03-15
+20:00
+
+Add authentication and authorization 
+(Reference : https://www.youtube.com/watch?v=yJP7Jv6d4Eg and https://www.youtube.com/watch?v=2Zwktsd6iSQ)
+
+Added Admin and Guest Roles
+
+Admin: CRUD(Creat, Read, Update, Delete)
+Credentials: 
+Email: test1@test.com
+Password: Products@123
+
+Guest: Details
+Credentials: 
+Email: test2@test.com
+Password: BoxProduct@123
+
+Database details:
+Servername: boxetheusappdbserver.database.windows.net
+Server admin: boxetheusadminuser
+Password: Products@321
+
+Azure link : https://boxetheus.azurewebsites.net/
