@@ -211,3 +211,41 @@ Azure Link: https://boxetheusapplicationweb.azurewebsites.net/
 Github Repository Link: https://github.com/saralaponnuraj/BoxetheusWebApp
 
 Azure Link: https://boxetheus.azurewebsites.net
+
+2024-03-20
+16:30
+
+The above link is getting Error 403 - This web app is stopped (Sarala's azure account was used to deploy and publish Test and Product link, due to subscription is displayed we are getting Error 403)
+
+We again deployed and published the Test and production link from Dheeru and Eshika's Azure account
+Added Admin and Guest Roles
+
+Admin: CRUD(Creat, Read, Update, Delete)
+Credentials: 
+Email: test1@test.com
+Password: Products@123
+
+Guest: Details
+Credentials: 
+Email: test2@test.com
+Password: BoxProduct@123
+
+(Production) Database details:
+Servername: boxetheusappserverdbserver
+Databasename : boxetheusappserver
+Server admin: boxetheusadminuser
+Password: Products@321
+
+(Test) Database details:
+Servername: boxtheusdb
+Databasename : Boxtheus_db
+Server admin: Boxetheusadmin
+Password: Products@321
+
+1. Test :
+Github Repository Link: https://github.com/Dheeru-28-7418/Boxtheus
+Azure Link: https://boxtheustest.azurewebsites.net
+
+2. Production: Published and deployed with Authentication & Authorization.
+Github Repository Link: https://github.com/saralaponnuraj/BoxetheusWebApp
+Azure Link: https://boxetheusapp.azurewebsites.net
