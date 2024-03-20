@@ -66,8 +66,8 @@ namespace Boxetheus.Migrations
 
                     b.Property<string>("Size")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.HasKey("Id");
 
