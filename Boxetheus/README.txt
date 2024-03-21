@@ -179,20 +179,7 @@ Deployed successfully in Azure - by Sarala
 Add authentication and authorization 
 (Reference : https://www.youtube.com/watch?v=yJP7Jv6d4Eg and https://www.youtube.com/watch?v=2Zwktsd6iSQ)
 
-Added Admin and Guest Roles
 
-Admin: CRUD(Creat, Read, Update, Delete)
-Credentials: 
-Email: test1@test.com
-Password: Products@123
-
-2024-03-15
-2140
-
-Guest: Details
-Credentials: 
-Email: test2@test.com
-Password: BoxProduct@123
 
 Database details:
 Servername: boxetheusappdbserver.database.windows.net
@@ -218,17 +205,6 @@ Azure Link: https://boxetheus.azurewebsites.net
 The above link is getting Error 403 - This web app is stopped (Sarala's azure account was used to deploy and publish Test and Product link, due to subscription is displayed we are getting Error 403)
 
 We again deployed and published the Test and production link from Dheeru and Eshika's Azure account
-Added Admin and Guest Roles
-
-Admin: CRUD(Creat, Read, Update, Delete)
-Credentials: 
-Email: test1@test.com
-Password: Products@123
-
-Guest: Details
-Credentials: 
-Email: test2@test.com
-Password: BoxProduct@123
 
 (Production) Database details:
 Servername: boxetheusappserverdbserver
