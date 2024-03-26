@@ -6,13 +6,13 @@ namespace Boxetheus.Controllers
     public class BoxWorldController : Controller
     {
         // 
-        // GET: /HelloWorld/
+        // GET: /BoxWorld/
         public IActionResult Index()
         {
             return View();
         }
         // 
-        // GET: /HelloWorld/Welcome/ 
+        // GET: /BoxWorld/Welcome/ 
         // GET: /HelloWorld/Welcome/ 
         // Requires using System.Text.Encodings.Web;
         public IActionResult Welcome(string name, int numTimes = 1)
